@@ -2,7 +2,7 @@ name: Import v0.1 assets
 on:
   push:
     paths:
-      - 'bootstrap/neurally-v0.1.b64'
+      - 'bootstrap/start-import.flag'
   workflow_dispatch:
 permissions:
   contents: write
