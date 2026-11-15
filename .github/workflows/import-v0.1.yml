@@ -15,8 +15,8 @@ jobs:
         run: |
           python - <<'PY'
           import base64, json, pathlib, zlib
-          p = pathlib.Path("bootstrap/neurally-v0.1.b64")
-          entries = json.loads(zlib.decompress(base64.b64decode(p.read_text().strip())))
+          payload = ''.join(p.read_text().strip() for p in sorted(pathlib.Path("bootstrap").glob("part-*.txt")))
+          entries = json.loads(zlib.decompress(base64.b64decode(payload)))
           for relative, entry in entries.items():
               target = pathlib.Path(relative)
               target.parent.mkdir(parents=True, exist_ok=True)
