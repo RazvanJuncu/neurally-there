@@ -1,0 +1,8 @@
+{
+  "name":"neurally-there",
+  "version":"0.1.0",
+  "private":true,
+  "type":"module",
+  "description":"Mobile-first AI learning PWA",
+  "scripts":{"test":"node tests/smoke.mjs"}
+}
